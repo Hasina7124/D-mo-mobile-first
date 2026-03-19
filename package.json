@@ -2,9 +2,12 @@
   "name": "d-mo-mobile-first",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,6 @@
   },
   "homepage": "https://github.com/Hasina7124/D-mo-mobile-first#readme",
   "devDependencies": {
-    "@babel/cli": "^7.28.6",
-    "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.2"
+    "vite": "^5.0.0"
   }
 }
