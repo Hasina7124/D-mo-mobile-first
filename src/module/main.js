@@ -1,21 +1,44 @@
 // js/main.js
 
+function createCard(title, text, hasButton = false) {
+  const card = document.createElement("section");
+  card.className = "card";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = title;
+
+  const p = document.createElement("p");
+  p.textContent = text;
+
+  card.append(h2, p);
+
+  if (hasButton) {
+    const btn = document.createElement("a");
+    btn.href = "#";
+    btn.className = "button";
+    btn.textContent = "Action principale";
+    card.appendChild(btn);
+  }
+
+  return card;
+}
+
 export function createMain() {
   const main = document.createElement("main");
   main.className = "layout";
 
-  main.innerHTML = `
-    <section class="card">
-      <h2>Contenu principal</h2>
-      <p>En version mobile, cette section occupe toute la largeur.</p>
-      <a href="#" class="button">Action principale</a>
-    </section>
+  const section = createCard(
+    "Contenu principal",
+    "En version mobile, cette section occupe toute la largeur.",
+    true,
+  );
 
-    <aside class="card">
-      <h2>Barre latérale</h2>
-      <p>Sur mobile, cette zone apparaît sous le contenu principal.</p>
-    </aside>
-  `;
+  const aside = createCard(
+    "Barre latérale",
+    "Sur mobile, cette zone apparaît sous le contenu principal.",
+  );
+
+  main.append(section, aside);
 
   return main;
 }
