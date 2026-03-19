@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Démo Mobile First</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fb;
+        color: #1f2937;
+        line-height: 1.5;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      .header {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 14px;
+        background: #111827;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 8px;
+      }
+
+      /* Desktop and tablet enhancement */
+      @media (min-width: 768px) {
+        .container {
+          padding: 24px;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .layout {
+          grid-template-columns: 2fr 1fr;
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Page Mobile First</h1>
+        <p></p>
+      </header>
+
+      <main class="layout">
+        <section class="card">
+          <h2>Contenu principal</h2>
+          <p></p>
+          <a href="#" class="button">Action principale</a>
+        </section>
+
+        <aside class="card">
+          <h2>Barre latérale</h2>
+          <p></p>
+        </aside>
+      </main>
+    </div>
+    <!-- Le fichier JS -->
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
